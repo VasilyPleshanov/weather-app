@@ -1,0 +1,74 @@
+@mixin container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@mixin btn-weather {
+  border: none;
+  opacity: 0.6;
+  cursor: pointer;
+  color: $color-white;
+  font-size: 16px;
+  padding: 0;
+  background-color: transparent;
+  transition: opacity 200ms ease-out 10ms;
+  &:hover {
+    opacity: 1;
+  }
+  @media (max-width: $mobile) {
+    font-size: 26px;
+    span {
+      display: none;
+    }
+  }
+  i {
+    margin-right: 5px;
+  }
+}
+
+@mixin temperature-item {
+  .temperature-item {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    &__temperature {
+      margin: 0;
+      font-size: 16px;
+      font-weight: normal;
+    }
+    &__units {
+      display: flex;
+    }
+    &__deg {
+      margin: 0;
+      font-size: 8px;
+    }
+    &__unit {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+}
+
+@mixin weather-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+@mixin max-min-temperature {
+  .max-min-temperature {
+    display: flex;
+    .max-temperature {
+      @include temperature-item;
+    }
+    .min-temperature {
+      @include temperature-item;
+    }
+    span {
+      opacity: 0.6;
+      margin: 0 2px;
+    }
+  }
+}
