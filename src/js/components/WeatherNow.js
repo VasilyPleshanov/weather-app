@@ -1,4 +1,4 @@
-import createForecastHourlyItems from './ForecastHourlyItems.js'
+import createForecastHourlyList from './ForecastHourlyList.js'
 import firstSymbolToUppercase from '../utils/firstSymbolToUppercase.js'
 import getTodaysDate from '../utils/getTodaysDate.js'
 import dateOnMonthDay from '../utils/dateOnMonthDay.js'
@@ -82,9 +82,7 @@ const createWeatherNow = (data, forecast) => {
         </div>
         
         <div class="now-weather__forecast-hourly forecast-hourly">
-          <ul class="forecast-hourly__list">
-            ${createForecastHourlyItems(forecast)}
-          </ul>
+          ${createForecastHourlyList(forecast)}   
         </div>
       </div>
     `
