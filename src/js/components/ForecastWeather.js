@@ -1,4 +1,4 @@
-import createForecastWeatherItems from './ForecastWeatherItems.js'
+import createForecastWeatherList from './ForecastWeatherList.js'
 
 const createForecastWeather = (data) => {
   const forecastWeather = document.createElement('section')
@@ -6,9 +6,7 @@ const createForecastWeather = (data) => {
 
   const forecastWeatherHTML = `
     <div class="forecast-weather__container">
-      <ul class="forecast-weather__list">
-        ${createForecastWeatherItems(data)}
-      </ul>
+      ${createForecastWeatherList(data)}
     </div>
   `
 

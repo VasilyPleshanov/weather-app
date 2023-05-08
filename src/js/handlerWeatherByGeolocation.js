@@ -47,10 +47,10 @@ const handlerWeatherByGeolocation = () => {
     document.querySelector('.weather').append(modal)
 
     setTimeout(() => {
-      document.querySelector('.modal-weather').classList.add('show')
+      modal.classList.add('show')
     }, 500)
     setTimeout(() => {
-      document.querySelector('.modal-weather').classList.remove('show')
+      modal.classList.remove('show')
     }, 5000)
     setTimeout(() => {
       modal.remove()

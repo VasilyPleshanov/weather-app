@@ -76,14 +76,14 @@ const createHeader = (data) => {
     } catch (error) {}
   })
 
-  window.onclick = (e) => {
+  window.addEventListener('click', (event) => {
     if (
-      e.target.classList.contains('search__input') ||
-      e.target.classList.contains('search__btn') ||
-      e.target.classList.contains('search__error') ||
-      e.target.classList.contains('city-weather__location') ||
-      e.target.classList.contains('city-weather__change') ||
-      e.target.parentNode.classList.contains('city-weather__change')
+      event.target.classList.contains('search__input') ||
+      event.target.classList.contains('search__btn') ||
+      event.target.classList.contains('search__error') ||
+      event.target.classList.contains('city-weather__location') ||
+      event.target.classList.contains('city-weather__change') ||
+      event.target.parentNode.classList.contains('city-weather__change')
     ) {
       return
     } else {
@@ -93,7 +93,7 @@ const createHeader = (data) => {
       locationBtn.classList.remove('_hide')
       input.value = ''
     }
-  }
+  })
 
   return header
 }
