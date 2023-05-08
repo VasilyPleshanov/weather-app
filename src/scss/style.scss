@@ -257,6 +257,7 @@ body {
       margin-left: 15px;
     }
   }
+
   .forecast-hourly {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
@@ -368,7 +369,7 @@ body {
           font-size: 26px;
         }
         &__deg {
-          font-size: 15px;
+          font-size: 13px;
         }
         &__unit {
           font-size: 26px;
@@ -382,7 +383,7 @@ body {
           font-size: 20px;
         }
         &__deg {
-          font-size: 15px;
+          font-size: 10px;
         }
         &__unit {
           font-size: 20px;
